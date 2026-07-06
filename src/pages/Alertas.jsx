@@ -88,6 +88,7 @@ const Alertas = () => {
                 <th>Producto</th>
                 <th>Stock</th>
                 <th>Mínimo</th>
+                <th>Diferencia</th>
                 <th>Proveedor</th>
                 <th>Estado</th>
                 <th>Fecha</th>
@@ -103,6 +104,7 @@ const Alertas = () => {
                   </td>
                   <td>{alert.stockCurrent}</td>
                   <td>{alert.minimumStock}</td>
+                  <td>{alert.stockCurrent - alert.minimumStock}</td>
                   <td>{alert.provider}</td>
                   <td>
                     <span className={`status-pill ${alert.status === "Resuelta" ? "success" : "danger"}`}>
